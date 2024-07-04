@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  text-align: center;
+  margin-top: 40px;
+  background-image: url(img/kelly-sikkema-5g8exOobDjg-unsplash.jpg);
+  background-size: cover;
+}
+
+body img {
+  max-width: 100%;
+}
+
+h1 {
+  color: #ff4081;
+}
+
+.subtexto {
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.card {
+  width: 400px;
+  height: 450px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  display: none; /* Esconde todas as imagens inicialmente */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 350px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  object-fit: cover;
+}
+
+.card p {
+  font-size: 1.2rem;
+  padding: 5px;
+}
+
+.footer {
+  margin-top: 30px;
+}
+
+button {
+  background: #ff4081;
+  color: #f5f5f5;
+  padding: 5px 8px;
+  margin: 10px;
+}
+
+.typing-effect {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  border-right: 0.15em solid;
+  animation: typing 2s steps(30) 1 normal both,
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  .typing-effect {
+    animation: typing 4s steps(30) 1 normal both,
+      blink-caret 0.75s step-end infinite;
+    font-size: 1.5em;
+  }
+}
